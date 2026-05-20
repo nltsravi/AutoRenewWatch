@@ -8,7 +8,7 @@ data class SubscriptionEntity(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
     val merchantName: String,
     val estimatedAmount: Double,
-    val interval: String, // Weekly, Monthly, Annual
+    val billingCycle: BillingCycle,
     val nextRenewalDate: Long,
     val category: String,
     val isActive: Boolean = true
